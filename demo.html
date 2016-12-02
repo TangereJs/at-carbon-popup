@@ -1,0 +1,121 @@
+<!doctype html>
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <title>at-carbon-popup Demo</title>
+  <script src="../webcomponentsjs/webcomponents-lite.js"></script>
+  <link rel="import" href="at-carbon-popup.html">
+  <link rel="import" href="../at-carbon-icon/at-carbon-icon.html">
+  <link rel="import" href="../at-theme/at-theme.html">
+
+  <style is="custom-style">
+      :root {
+        --at-carbon-popup: {
+          /* general styles go here */
+        };
+
+        --at-carbon-popup-disabled: {
+          /* styles for disabled at-carbon-popups go here */
+        };
+
+        --at-carbon-popup-content: {
+          /* styles for the popup content go here */
+        };
+
+        --at-carbon-popup-content-narrow: {
+          background-color: #e4e4e4;
+        };
+
+        --at-carbon-popup-icon: {
+          /* styles for the popup icon go here */
+          color: red;
+        };
+
+        --at-carbon-popup-icon-open: {
+          /* style for the icon in open state go here */
+        };
+
+        --at-carbon-popup-icon-hover: {
+          /* style for the icon in hover state go here */
+        };
+
+        --at-carbon-popup-icon-disabled: {
+          /* styles for the icon if the control is disabled go here */
+        };
+      }
+
+      .whatsapp-at-carbon-popup {
+        --at-carbon-popup-icon: {
+          border-radius: 50%;
+          width: 25px;
+          height: 25px;
+          text-align: center;
+          line-height: 25px;
+          @apply(--shadow-transition);
+        };
+
+        --at-carbon-popup-icon-hover: {
+          @apply(--shadow-elevation-2dp);
+        };
+
+        --at-carbon-popup-icon-open: {
+          @apply(--shadow-elevation-2dp);
+          background-color: green;
+          color: #fff;
+        };
+
+        --at-carbon-popup-icon-disabled: {
+          color: #c1c1c1;
+        };
+
+        --at-carbon-popup-content-narrow: {
+          color: #fff;
+          background-color: #1aa46b;
+          padding-top: 40px;
+        };
+
+        --at-carbon-popup-slider: {
+          background-color: #0e7c4e
+        };
+      }
+  </style>
+
+</head>
+<body style="">
+
+<p>An example of <code>&lt;at-carbon-popup&gt;</code>:</p>
+
+<at-carbon-popup valign="bottom" style="position: absolute; left: 10%; top: 50%;">
+  <div popup-icon>
+    <at-carbon-icon icon="now:wrench"></at-carbon-icon><span>Open me!</span>
+  </div>
+  <at-carbon-icon popup-slider icon="now:wrench"></at-carbon-icon>
+  <div popup style="white-space: nowrap;">
+    <p>This popup opens under the icon.</p>
+    <p>But only if there is enough space left in you brower.</p>
+  </div>
+</at-carbon-popup>
+
+<at-carbon-popup valign="top" halign="right" class="whatsapp-at-carbon-popup" style="position: absolute; left: 50%; top: 50%;">
+  <div popup-icon>
+    <at-carbon-icon icon="now:wrench"></at-carbon-icon>
+  </div>
+  <at-carbon-icon popup-slider icon="now:wrench"></at-carbon-icon>
+  <div popup style="white-space: nowrap;">
+    Everybody uses <strong>whatsapp</strong>.<br>
+    <button popup-close>That's cool</button>
+  </div>
+</at-carbon-popup>
+
+</body>
+</html>
