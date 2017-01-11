@@ -3,11 +3,11 @@
   "version": "1.0.0.0",
   "main": "at-carbon-popup.html",
   "dependencies": {
-    "tangere": "TangereJs/tangere#0.8-preview",
-    "at-theme": "TangereJs/at-theme#0.8-preview",
-    "at-carbon-icon": "TangereJs/at-carbon-icon#0.8-preview",
-    "at-doc-viewer": "TangereJs/at-doc-viewer#0.8-preview",
-    "at-core-media-query": "TangereJs/at-core-media-query#0.8-preview",
+    "tangere": "TangereJs/tangere#master",
+    "at-theme": "TangereJs/at-theme#master",
+    "at-carbon-icon": "TangereJs/at-carbon-icon#master",
+    "at-doc-viewer": "TangereJs/at-doc-viewer#master",
+    "at-core-media-query": "TangereJs/at-core-media-query#master",
     "iron-flex-layout": "PolymerElements/iron-flex-layout#master",
     "iron-resizable-behavior": "PolymerElements/iron-resizable-behavior#master"
   }
