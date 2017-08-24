@@ -88,34 +88,149 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           background-color: #0e7c4e
         };
       }
+
+      .horizontal-flex-container {
+        @apply(--layout-horizontal);
+      }
+
+      .popup-container {
+        @apply(--layout-flex-3);
+        @apply(--layout-vertical);
+        @apply(--layout-center-center);
+        height: 350px;
+      }
   </style>
 
 </head>
-<body style="">
+<body>
 
+<!-- TODO -->
+<!-- TODO -->
+<!-- TODO -->
+<!-- TODO -->
+<!-- TODO -->
+<!-- TODO -->
+
+<!-- Make better demos for valign, halign, forceAlign, spacing -->
+
+<!-- TODO -->
+<!-- TODO -->
+<!-- TODO -->
+<!-- TODO -->
+<!-- TODO -->
+<!-- TODO -->
 <p>An example of <code>&lt;at-carbon-popup&gt;</code>:</p>
 
-<at-carbon-popup valign="bottom" style="position: absolute; left: 10%; top: 50%;">
-  <div popup-icon>
-    <at-carbon-icon icon="now:wrench"></at-carbon-icon><span>Open me!</span>
+<div class="horizontal-flex-container">
+  <div class="popup-container">
+    <at-carbon-popup>
+      <div popup-icon>
+        <at-carbon-icon icon="now:wrench"></at-carbon-icon><span>Open me!</span>
+      </div>
+      <at-carbon-icon popup-slider icon="now:wrench"></at-carbon-icon>
+      <div popup style="white-space: nowrap;">
+        <p>This popup opens to the bottom left.</p>
+        <p>But only if there is enough space left in you brower.</p>
+      </div>
+    </at-carbon-popup>  
   </div>
-  <at-carbon-icon popup-slider icon="now:wrench"></at-carbon-icon>
-  <div popup style="white-space: nowrap;">
-    <p>This popup opens under the icon.</p>
-    <p>But only if there is enough space left in you brower.</p>
+  
+  <div class="popup-container">
+    <at-carbon-popup halign="right">
+      <div popup-icon>
+        <at-carbon-icon icon="now:wrench"></at-carbon-icon><span>Open me!</span>
+      </div>
+      <at-carbon-icon popup-slider icon="now:wrench"></at-carbon-icon>
+      <div popup style="white-space: nowrap;">
+        <p>This popup opens to the bottom right.</p>
+        <p>But only if there is enough space left in you brower.</p>
+      </div>
+    </at-carbon-popup>  
   </div>
-</at-carbon-popup>
 
-<at-carbon-popup valign="top" halign="right" class="whatsapp-at-carbon-popup" style="position: absolute; left: 50%; top: 50%;">
-  <div popup-icon>
-    <at-carbon-icon icon="now:wrench"></at-carbon-icon>
+    <div class="popup-container">
+    <at-carbon-popup valign="top">
+      <div popup-icon>
+        <at-carbon-icon icon="now:wrench"></at-carbon-icon><span>Open me!</span>
+      </div>
+      <at-carbon-icon popup-slider icon="now:wrench"></at-carbon-icon>
+      <div popup style="white-space: nowrap;">
+        <p>This popup opens to the top left.</p>
+        <p>But only if there is enough space left in you brower.</p>
+      </div>
+    </at-carbon-popup>  
   </div>
-  <at-carbon-icon popup-slider icon="now:wrench"></at-carbon-icon>
-  <div popup style="white-space: nowrap;">
-    Everybody uses <strong>whatsapp</strong>.<br>
-    <button popup-close>That's cool</button>
+
+    <div class="popup-container">
+    <at-carbon-popup halign="right" valign="top">
+      <div popup-icon>
+        <at-carbon-icon icon="now:wrench"></at-carbon-icon><span>Open me!</span>
+      </div>
+      <at-carbon-icon popup-slider icon="now:wrench"></at-carbon-icon>
+      <div popup style="white-space: nowrap;">
+        <p>This popup opens to the top right.</p>
+        <p>But only if there is enough space left in you brower.</p>
+      </div>
+    </at-carbon-popup>  
   </div>
-</at-carbon-popup>
+
+</div>
+
+<div class="horizontal-flex-container">
+  
+  <div class="popup-container">
+    <at-carbon-popup class="whatsapp-at-carbon-popup">
+      <div popup-icon>
+        <at-carbon-icon icon="now:wrench"></at-carbon-icon>
+      </div>
+      <at-carbon-icon popup-slider icon="now:wrench"></at-carbon-icon>
+      <div popup style="white-space: nowrap;">
+        Everybody uses <strong>whatsapp</strong>.<br>
+        <button popup-close>That's cool</button>
+      </div>
+    </at-carbon-popup>
+  </div>
+  
+  <div class="popup-container">
+    <at-carbon-popup class="whatsapp-at-carbon-popup" haligh="right">
+      <div popup-icon>
+        <at-carbon-icon icon="now:wrench"></at-carbon-icon>
+      </div>
+      <at-carbon-icon popup-slider icon="now:wrench"></at-carbon-icon>
+      <div popup style="white-space: nowrap;">
+        Everybody uses <strong>whatsapp</strong>.<br>
+        <button popup-close>That's cool</button>
+      </div>
+    </at-carbon-popup>
+  </div>
+
+  <div class="popup-container">
+    <at-carbon-popup class="whatsapp-at-carbon-popup" valign="top">
+      <div popup-icon>
+        <at-carbon-icon icon="now:wrench"></at-carbon-icon>
+      </div>
+      <at-carbon-icon popup-slider icon="now:wrench"></at-carbon-icon>
+      <div popup style="white-space: nowrap;">
+        Everybody uses <strong>whatsapp</strong>.<br>
+        <button popup-close>That's cool</button>
+      </div>
+    </at-carbon-popup>
+  </div>
+
+  <div class="popup-container">
+    <at-carbon-popup class="whatsapp-at-carbon-popup" valign="top" haligh="right">
+      <div popup-icon>
+        <at-carbon-icon icon="now:wrench"></at-carbon-icon>
+      </div>
+      <at-carbon-icon popup-slider icon="now:wrench"></at-carbon-icon>
+      <div popup style="white-space: nowrap;">
+        Everybody uses <strong>whatsapp</strong>.<br>
+        <button popup-close>That's cool</button>
+      </div>
+    </at-carbon-popup>
+  </div>
+</div>
+
 
 </body>
 </html>
